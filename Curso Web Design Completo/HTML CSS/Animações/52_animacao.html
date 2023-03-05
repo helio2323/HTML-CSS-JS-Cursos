@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @keyframes anda {
+            0%{
+                transform: translateX(0);
+                background: yellow;
+            }
+
+            25%, 75%{
+                height:  80px;
+            }
+
+            
+            100%{
+                transform: translateX(400px);
+                background: blue;
+            }
+        }
+
+        #anima-time div{
+            width: 50px;
+            height: 25px;
+            border: 2px solid red;
+        }
+
+        #anima-time div:nth-child(1){
+           /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in; */
+
+            animation: anda 2s ease-in;
+
+            /*
+            IN - Inicio - acelera
+            OUT - Finout - desacelera
+            */
+        }
+
+        #anima-time div:nth-child(2){
+          /*  animation-name: anda;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: anda 2s ease-in-out infinite alternate;
+
+        }
+        #anima-time div:nth-child(3){
+           /* animation-name: anda;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s; */
+
+            animation: anda 2s ease-in-out 1s infinite alternate;
+            
+
+        }
+        #anima-time div:nth-child(4){
+
+            background: red;
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+
+        }
+        #anima-time div:nth-child(5){
+
+background: red;
+
+animation-name: anda;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: both;
+animation-play-state: running;
+
+}
+#anima-time div:nth-child(5):hover{
+    animation-play-state: paused;
+}
+
+    </style>
+</head>
+<body>
+    <h2>Animation</h2>
+
+    <div id="anima-time">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

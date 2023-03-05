@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- criar fomulario com campo de texto e botao de submit com função de cadastro em banco de dados local -->
+
+
+    <form action="cadastrar.php" method="post">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="telefone" placeholder="Telefone">
+        <input type="submit" value="Cadastrar">
+    </form>
+    
+
+
+</body>
+
+<script>
+
+//criar funçao para cadastrar dados em banco de dados local
+
+    function cadastrar(){
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var telefone = document.getElementById('telefone').value;
+        var pessoa = {
+            nome: nome,
+            email: email,
+            telefone: telefone
+        };
+        var pessoas = [];
+        if(localStorage.getItem('pessoas')){
+            pessoas = JSON.parse(localStorage.getItem('pessoas'));
+        }
+        pessoas.push(pessoa);
+        localStorage.setItem('pessoas', JSON.stringify(pessoas));
+    }
+
+    document.getElementById('cadastrar').addEventListener('click', cadastrar);
+
+    
+
+
+</script>
+
+</html>

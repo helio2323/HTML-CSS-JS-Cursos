@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //literal
+        function somar( n1, n2 ) {
+            return n1 + n2;
+        }
+
+        var soma = somar(10, 20);
+        console.log('Resultado da soma: ' + soma);
+
+        somar.teste = 'propriedade da função';
+
+        console.log(somar.teste);
+
+        var teste = function() {
+            console.log('teste');
+        }
+
+        teste('Olá');
+
+        var teste2 = function(f){
+            f();
+        }
+
+        teste2(function(){
+            console.log('Funcao passada por parametro');
+        });
+
+        console.log('------------------------------------');
+
+        var x = 0;
+
+        function mostrarX() {
+            x = 10;
+            console.log('mostrar x: ' + x);
+        }
+
+        console.log('mostrar x: ' + x);
+
+        mostrarX();
+
+        //IFEE
+        (function() {
+            'use strict'; 
+            var isValid = false
+            console.log('isValid: ' + isValid);
+
+            function somar(arr){
+                console.log(arr[0] + arr[1] + arr[2]);
+
+                console.log(arguments)
+            }
+
+            somar([1, 2, 3]);
+
+        })();
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

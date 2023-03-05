@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <button id="btn1" onclick="clicar()">Btn 1</button>
+        <button id="btn2">Btn 2</button>
+        <button id="btn3">Btn 3</button>
+
+    </div>
+
+    <script>
+
+        var btn2 = document.getElementById('btn2');
+        btn2.onclick = clicar();
+        var btn3 = document.getElementById('btn3');
+
+        function clicar() {
+            alert('Clicou');
+        }
+
+        btn3.addEventListener('click', function() {
+            alert('Clicou com dom level 2');
+        });
+
+     function send(parametro1, parametro2) {
+        alert(parametro1 + ' ' + parametro2);
+     }
+        
+     parametro = 'Helio';
+        parametro2 = 'Gabriela';
+
+        console.log(parametro + ' ' + parametro2);
+     
+
+     }
+
+    </script>
+    
+</body>
+</html>
