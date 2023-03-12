@@ -1,0 +1,16 @@
+//Para informamos que uma propriedade é opcional inserimos o sinal de ?
+
+//Veja o exemplo:
+
+type Use = {
+    name: string;
+    email: string;
+    age: number;
+    isAdmin?: boolean; // isAdmin não será obrigatória na sua declaração
+}
+
+let newUser: Use = {
+    name: 'João',
+    email: 'joao@email.com',
+    age: 18
+}

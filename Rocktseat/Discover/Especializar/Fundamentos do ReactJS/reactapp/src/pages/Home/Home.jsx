@@ -6,7 +6,7 @@ import Card  from '../../components/Card';
 function Home(){
   const [studentName, setStudentName] = useState('Seu Nome');
   const [students, setStudents] = useState([]);
-  const [user, setUser] = useState({name: '', avatar: ''});
+  const [user , setUser] = useState({name: '', avatar: ''});
 
   function handleAddStudent(){
       const newStudent = {
