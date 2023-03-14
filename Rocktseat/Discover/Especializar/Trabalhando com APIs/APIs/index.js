@@ -7,15 +7,15 @@ app.listen('3000')
 //TRABALHANDO COM POST *********************
 //app.route('/').post((req, res) => res.send(req.body))
 
-//middleware
-//app.use(express.json())
+middleware
+app.use(express.json())
 
 
 // TRABALHANDO COM GET *********************
-//app.route('/').get((req, res) => res.send("Hello"))
-//app.route('/sobre').get((req, res) => res.send("Hello Sobre"))
-//req = requisição
-//res = resposta
+app.route('/').get((req, res) => res.send("Hello"))
+app.route('/sobre').get((req, res) => res.send("Hello Sobre"))
+req = requisição
+res = resposta
 
 //TRABALHANDO COM PUT *********************
 

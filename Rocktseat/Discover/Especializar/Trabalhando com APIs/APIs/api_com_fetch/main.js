@@ -37,6 +37,14 @@ const newUser = {
     city: "Rio do Sul"
 }
 
-addUser(newUser)
+function deleteUser(id){
+    fetch(`${url}/${id}`)
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
+}
 
-getUser()
+
+
+//addUser(newUser)
+//getUser()
