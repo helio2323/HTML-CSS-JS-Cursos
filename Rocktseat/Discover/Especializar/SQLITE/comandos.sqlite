@@ -1,0 +1,18 @@
+SELECT * FROM funcionarios
+JOIN departamentos
+ON departamentos.id_dept = funcionarios.id_departamento
+
+SELECT * FROM funcionarios
+JOIN departamentos
+ON funcionarios.id_departamento = departamentos.id_dept
+WHERE departamentos.id_dept = 2
+
+SELECT funcionarios.nome, funcionarios.cpf, departamentos.descricao 
+FROM funcionarios
+JOIN departamentos
+ON funcionarios.id_departamento = departamentos.id_dept
+
+SELECT func.nome as "Nome", func.cpf as "CPF", dept.descricao 
+FROM funcionarios as func
+LEFT OUTER JOIN departamentos as dept
+ON func.id_departamento = dept.id_dept
