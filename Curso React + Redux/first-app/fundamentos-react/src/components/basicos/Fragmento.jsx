@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Fragmento(){
+export default function Fragmento() {
     return (
         <div>
             <h2>Fragmento</h2>
