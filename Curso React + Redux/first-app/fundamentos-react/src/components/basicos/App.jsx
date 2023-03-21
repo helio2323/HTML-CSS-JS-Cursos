@@ -8,6 +8,10 @@ import Fragmento from "./Fragmento";
 import Aleatorio from "./aleatorio";
 import Card from "../layout/Card";
 import Familia from "./Familia";
+import ListaAlunos from "../repeticao/ListaAlunos";
+import TabelaProdutos from "../repeticao/TabelaProdutos";
+import ParOuImpar from "../condicional/ParOuImpar";
+import UsuarioInfo from "../condicional/UsuarioInfo";
 
 const tag = <strong>Olá React!!</strong>;
 
@@ -16,8 +20,18 @@ export default function App(props) {
   return (
     <div id="app">
       <div>
-        <Card titulo="Componente com filhos" >
-            < Familia sobrenome="Silva"></Familia>
+        <Card titulo="Rederização condicional" >
+          <ParOuImpar numero={2} />
+          <UsuarioInfo usuario={ {nome: 'Helio'} } />
+        </Card>
+        <Card titulo="Tabela de Produtos">
+          <TabelaProdutos />
+        </Card>
+        <Card titulo="Listas">
+          <ListaAlunos></ListaAlunos>
+        </Card>
+        <Card titulo="Componente com filhos">
+          <Familia sobrenome="Silva"></Familia>
         </Card>
         <Card titulo="Exemplo de Card">
           <Aleatorio min={10} max={60} />
