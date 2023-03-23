@@ -12,6 +12,12 @@ import ListaAlunos from "../repeticao/ListaAlunos";
 import TabelaProdutos from "../repeticao/TabelaProdutos";
 import ParOuImpar from "../condicional/ParOuImpar";
 import UsuarioInfo from "../condicional/UsuarioInfo";
+import DiretaPai from "../comunicacao/DiretaPai";
+import IndiretaPai from "../comunicacao/IndiretaPai";
+import Input from "../formulario/Input";
+import Contador from "../contador/Contador";
+import InputEstilizado from "../TreinoCss/InputEstilizado";
+import Supresinha from "../desafio/supresinha";
 
 const tag = <strong>Olá React!!</strong>;
 
@@ -20,9 +26,31 @@ export default function App(props) {
   return (
     <div id="app">
       <div>
+        <Card>
+          <Supresinha></Supresinha>
+        </Card>
+        <Card>
+          <InputEstilizado />
+          <InputEstilizado />
+        </Card>
+        <Card titulo="Contador">
+          <Contador numeroInicial={10} />
+        </Card>
+        <Card titulo="Componente controlado">
+          <Input />
+        </Card>
+        <Card titulo="Comunicacao Indireta" >
+          <IndiretaPai />
+        </Card>
+
+        <Card titulo="Comunicacao Direta" >
+          <DiretaPai />
+        </Card>
+
         <Card titulo="Rederização condicional" >
           <ParOuImpar numero={2} />
           <UsuarioInfo usuario={ {nome: 'Helio'} } />
+          <UsuarioInfo usuario={ {email: 'helio_lima@outlook.com.br'} } />
         </Card>
         <Card titulo="Tabela de Produtos">
           <TabelaProdutos />
