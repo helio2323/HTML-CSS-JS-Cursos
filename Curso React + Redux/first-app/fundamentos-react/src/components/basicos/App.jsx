@@ -26,7 +26,7 @@ export default function App(props) {
   return (
     <div id="app">
       <div>
-        <Card>
+        <Card titulo="Megasena">
           <Supresinha></Supresinha>
         </Card>
         <Card>
