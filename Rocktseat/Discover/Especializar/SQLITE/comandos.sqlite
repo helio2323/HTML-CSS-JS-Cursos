@@ -12,6 +12,8 @@ FROM funcionarios
 JOIN departamentos
 ON funcionarios.id_departamento = departamentos.id_dept
 
+estou testando isso
+
 SELECT func.nome as "Nome", func.cpf as "CPF", dept.descricao 
 FROM funcionarios as func
 LEFT OUTER JOIN departamentos as dept
