@@ -4,6 +4,8 @@ import Layout from '@/components/Layout'
 import Tabela from '@/components/Tabela'
 import Cliente from '@/core/Cliente'
 import Botao from '@/components/Botao'
+import Formulario from '@/components/Entrada'
+import { text } from 'stream/consumers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,22 +22,29 @@ function clienteExcluido (cliente: Cliente) {
   console.log(cliente.nome)
 }
   return (
-    <div className={`
+    <div
+      className={`
     flex justify-center items-center h-screen
     bg-gradient-to-r from-blue-500 to-purple-500
     text-white
-    `}>
-
-      <Layout titulo="Cadastro Simples" >
-        <div className='flex justify-end'>
-          <Botao className='mb-4'>Novo Cliente</Botao>
+    `}
+    >
+      <Layout titulo="Cadastro Simples">
+        <div className="flex justify-end">
+          <Botao className="mb-4">Novo Cliente</Botao>
         </div>
         <span>
-          <Tabela clientes={clientes} 
-          clienteSelecionado={clienteSelecionado}
-          clienteExcluido={clienteExcluido}></Tabela>
+          <Tabela
+            clientes={clientes}
+            clienteSelecionado={clienteSelecionado}
+            clienteExcluido={clienteExcluido}
+          ></Tabela>
+          
         </span>
-        </Layout>  
+        <span>
+        <Formulario texto='texto' valor=''  />
+        </span>
+      </Layout>
     </div>
-  )
+  );
 }
